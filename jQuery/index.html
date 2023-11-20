@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    <style>
+        .inactive {
+            display: none;
+        }
+        .cubo {
+            position: absolute;
+            background-color: black;
+            width: 50px;
+            height: 50px;
+        }
+        .cubo2 {
+            position: absolute;
+            background-color: rgb(233, 5, 5);
+            width: 50px;
+            height: 50px;
+        }
+        .up {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="saludo"> Hola desde Codigo Facilito</h1>
+    <div>
+        <p id="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut eleifend quam. Aliquam non ornare tellus. Praesent sed vehicula augue. Sed rhoncus a justo aliquam tincidunt. Quisque gravida placerat malesuada. Fusce semper ullamcorper justo nec hendrerit. Nunc nec lacinia justo. Praesent quis maximus augue. Proin vitae eros ut felis lacinia semper id at est. Aliquam erat volutpat. Sed dignissim eu eros et semper. Donec dignissim nulla ut urna blandit, sed ultricies libero volutpat. Nunc eu turpis eros. Quisque in ultricies mauris, eget fermentum augue. Vivamus at pharetra enim.</p>
+    </div>
+    <div>
+        <p id="parrafo2">Phasellus sed libero ultrices, congue tellus eu, efficitur tellus. Integer commodo tortor sit amet odio tincidunt, nec porta enim dignissim. Praesent id felis mauris. Nunc urna velit, accumsan sed porta et, interdum et urna. Praesent faucibus velit tortor. Donec mollis ipsum nunc, sit amet pretium eros ultricies ac. Etiam faucibus consectetur ante vel luctus. In ut ligula nec neque porta iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+        <input type="button" class="hide2" value="hide">
+        <input type="button" class="show2" value="show">
+    </div>
+    <div>
+        <p id="parrafo3" class="">Aliquam eget dui eget arcu dictum tincidunt. Cras mattis neque et nulla lobortis vulputate. Nulla quis mi varius, pretium urna sed, mattis tellus. Nullam suscipit placerat odio sed condimentum. Vestibulum faucibus rhoncus tortor, sit amet semper risus molestie et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris in purus elementum, gravida mauris vitae, facilisis libero. Integer consectetur augue eu turpis ultrices laoreet. Suspendisse vestibulum dui in ipsum euismod scelerisque. Suspendisse porta gravida eleifend. Quisque imperdiet ipsum in ipsum viverra, nec condimentum est egestas.</p>
+        <input type="button" class="hide3" value="hide">
+        <input type="button" class="show3" value="show">
+    </div>
+    <div>
+        <p id="parrafo4">Nulla maximus est diam, quis vestibulum leo varius elementum. Pellentesque iaculis urna ac lacus cursus, mattis condimentum mi lobortis. Morbi id leo sagittis, vehicula purus nec, fermentum est. Donec ut ligula pharetra, viverra tortor eleifend, sagittis nisi. Sed sed consectetur turpis. Vestibulum id imperdiet odio, non dapibus magna. Maecenas lobortis orci at augue semper, et volutpat est euismod. Morbi in quam aliquam, vulputate ex mollis, auctor eros. Curabitur interdum sapien in dui vestibulum vehicula. In placerat varius libero, a molestie felis posuere nec. Quisque tempus lorem odio, vel tincidunt lacus sodales a. Nullam nec enim quis nisl dignissim pretium. Vivamus suscipit tincidunt nisi in sodales. Nunc felis dui, venenatis non ante a, placerat dapibus neque.</p>
+        <input type="button" class="hide4" value="hide">
+        <input type="button" class="show4" value="show">
+    </div>
+    <div class="holaMundo">
+        :3 :)
+    </div>
+
+    <img src="https://comodibujar.club/wp-content/uploads/2021/05/cocodrilo-kawaii.jpg" alt="">
+    <input class="btn" type="button" value="infoImg">
+    
+    <div>
+        <input type="text" name="cuadroDeTexto" id="inputText">
+        <label for="">Contador de presion de teclas <span>0</span></label>
+    </div>
+    <div>
+        <i class="fa fa-volumen-up" id="icon"></i>
+    </div>
+    <div>
+        <p id="parrafo5">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum est nunc, mattis id tortor nec, sodales pharetra sapien. Aenean quis lectus in magna consequat tristique eu a quam. Phasellus aliquet non ligula et sagittis. Praesent gravida pharetra erat, vehicula consectetur urna scelerisque non. Vivamus vestibulum sem ac fringilla porttitor. Morbi sed arcu vitae arcu fermentum cursus. Proin vel eros risus. Aenean non velit eget eros aliquet sagittis. Vestibulum id massa eget eros imperdiet posuere. Nunc porta ut est eget tincidunt. Aenean a mattis felis.</p>
+    </div>
+    <div>
+        <p id="parrafo6">Pellentesque nec pulvinar dui. Vivamus tincidunt vitae leo eu malesuada. Morbi eget pulvinar libero. Aenean tincidunt sit amet elit vitae rutrum. Vivamus pretium finibus nisl, at interdum risus lacinia ac. In euismod augue ut venenatis viverra. Nulla vulputate vitae nulla ac gravida. Nam sodales nec felis id molestie. Nam placerat pellentesque tortor ut posuere.</p>
+    </div>
+    <ul id="colors">
+        <li>Orange</li>
+        <li>Purple</li>
+        <li>White</li>
+    </ul>
+
+    <div style="height: 90px;">
+        <button id="left" class="fa fa-backward">left</button>
+        <button id="right" class="fa fa-forward">rigth</button>
+        <button id="up" class="fa fa-caret-up">up</button>
+        <button id="down" class="fa fa-caret-down">down</button>
+        <div style="height: 10px;"></div>
+        <div class="cubo"></div>
+    </div>
+    <div style="height: 50px;">
+        <div class="cubo2"></div>
+    </div>
+    <div class="up">
+        <button type="button" class="scrollUp">up</button>
+    </div>
+    <div>
+        <ol id="ol1-padre">
+            <li>elemento 1</li>
+            <li id="hijo">elemento 2</li>
+            <li>elemento 3</li>
+            <li>elemento 4</li>
+        </ol>
+
+        <button id="append">append</button>
+        <button id="prepend">prepend</button>
+        <button id="sortFirst">ordenaPrimero</button>
+        <button id="sortLast">ordenaUltimo</button>
+        <button id="remove">remove</button>
+        <button id="copy">copy</button>
+
+        <ol id="ol2"></ol>
+    </div>
+    <div id="virtualElements">
+        <button type="button" id="vListCreator">crear lista</button>
+        <button type="button" id="vElementCreator">crear elemento</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/meqPDA1Gzuk?si=DhwJQf1R54hNCfhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- <script src="js/jquery.min.js"></script> agregar jQuery mediante archivo-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!--agregar mediante url-->
+    <script src="index.js"></script>
+    <script src="https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script> <!-- este src
+    es un plugin de jquery para poder dar efectos a las animaciones del cubo -->
+        
+    <script>
+        // $(document).ready(function() {
+        //     $('#parrafo').text("Holi");
+        //     $('.saludo').css({'background-color':'red'});
+        //     $('div').text("Hola mundo");
+        // });
+        // $(function () {               la primera forma es la recomemdadd para utilizar
+        //     alert("Primera Forma")
+        // });
+        // $().ready(function () {
+        //     alert("Segunda Forma")
+        // });
+        // $(document).ready(function () {
+        //     alert("Tercera Forma")
+        // });
+        // $("div").ready(function () {
+        //     alert("Cuarta Forma")
+        // });
+                        // $.when( $.ready, $.getScript("index.js") ).then(function() {
+                        //     console.log("paso");
+                        // }).catch( function() {
+                        //     console.log("no paso");
+                        // });
+    </script>
+</body>
+</html>

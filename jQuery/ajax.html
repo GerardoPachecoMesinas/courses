@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Method</title>
+</head>
+<body>
+    <center><h1>METODO GET</h1></center>
+    <h3 id="resultado"></h3>
+    <input type="submit" value="ejecutar" id="ejecutar">
+
+    <input type="text" name="" id="value1">
+    <input type="text" name="" id="value2">
+    <input type="button" value="" id="ejecutarsuma">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $("h1").attr({id: "hola"}); // con esta linea probamos que este funcionando el jquery
+//////////////////////////// metodo get ///////////////////////////////////////
+            $.get("ajax.php", {nombre: "juanpacopedro de la mar"}, function (data) {
+                $("#resultado").text(data);
+            });
+
+            //////////// segundo ejemplo
+            $.get("ajax.php", function(data) {
+                $("#resultado").text(data); 
+            });
+
+//////////////////////////// metodo post ///////////////////////////////////////
+            $("#ejecutar").click(function () {
+                $.post("ajax.php", {
+                    nombre: "juanpacopedro", // aqui estamos enviando los datos a php para alla formar el saludo
+                    metodo: "post"           // y traerlo de regreso como data
+                }, function (data,status) {
+                    console.log(data+" "+status);  // Hola juanpacopedro uso el metodo post+" "+success
+                });
+            });
+
+//////////////////////////// metodo getJSON ///////////////////////////////////////
+            $("#ejecutar").click(function () {
+                $.getJSON("ajax.php",{
+                    nombre: "juanpacopedro",
+                    metodo: "Get"
+                },function (data) {
+                    $.each(data,function (i,value) {
+                        console.log(i+" "+value);
+                    });
+                });
+            });
+
+//////////////////////////// ejemplo ajax ///////////////////////////////////////
+            $("#ejecutar").click(function () {
+                suma($("#value1").val(), $("#value2").val());
+            });
+            function suma(val1, val2) {
+                var parameters = {
+                    "val1": val1,
+                    "val2": val2
+                }
+                $.ajax({
+                    data: parameters,
+                    url: "ajax.php",
+                    type: "post",
+                    beforeSend: function () {
+                        console.log("Se esta procesando la información");
+                    }
+                })
+                .done(function (data) {
+                    $("#resultado").text(data);
+                });
+            }
+
+
+
+        });
+    </script>
+</body>
+</html>

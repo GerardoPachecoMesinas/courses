@@ -1,0 +1,46 @@
+body {
+    background-color: burlywood;
+    margin: 10;
+}
+.box {
+    background-color: rgb(36, 60, 61);
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+#header {
+    background-color: rgb(71, 139, 223);
+    width: 100%;
+    height: 40px;
+}
+#sidebar {
+    background-color: lightblue;
+    width: 25%;
+    height: 400px;
+}
+#content {
+    background-color: lightcyan;
+    width: 75%;
+    height: 400px;
+}
+#footer {
+    background-color: rgb(4, 28, 73);
+    width: 100%;
+    height: 40px;
+}
+#e {
+    background-color: cadetblue;
+    width: 90%;
+    height: 6%;
+    margin: 5%;
+    margin-bottom: 1%;
+    border-radius: 0%;
+}
+#f{
+    border-radius: 20%;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    color: aliceblue;
+}
